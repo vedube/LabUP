@@ -1,0 +1,27 @@
+{{ extends "global/Page.html" }}
+{{ block title }}   
+    <div class="round-title">Ronda 1</div>
+    <div class="contribution-title">Contribución</div>
+{{ endblock }}
+
+{{ block content }}
+
+    <p>
+        Tienes {{ C.ENDOWMENT }} soles. Debes decidir cuánto conservas y cuánto contribuyes al proyecto grupal.
+    </p>
+
+
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}
+
+{{ block extrajs }}
+  <style>
+    .round-title {
+      color: #9c9c9c; /* Cambia el color a un tono gris deseado */
+      margin-bottom: 10px;
+    }
+  </style>
+{{ endblock }}

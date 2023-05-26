@@ -1,0 +1,94 @@
+{{ block title }}   
+    <div class="round-title">Ronda 1</div>
+    <div class="contribution-title">Resultados</div>
+{{ endblock }}
+
+{{ block content }}
+
+    <p>
+        <style>
+            table {
+              border-collapse: collapse;
+            }
+          
+            table td {
+              padding: 5px;
+              text-align: right;
+            }
+          
+            table td:first-child {
+              text-align: left;
+            }
+          
+            table td:last-child {
+              text-align: left;
+            }
+        </style>
+        
+        <table>
+            <tr>
+                <td>Dotación:</td>
+                <td>{{ C.ENDOWMENT }} soles</td>
+            </tr>
+            
+            <tr>
+                <td class="border-bottom">Tu contribución al proyecto grupal:</td>
+                <td class="border-bottom">4 soles</td>
+            </tr>
+
+            <tr>
+                <td>La contribución de los otros miembros:</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>4 soles</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>4 soles</td>
+            </tr>
+            <tr>
+                <td class="border-bottom"></td>
+                <td class="border-bottom">4 soles</td>
+            </tr>
+
+            <tr>
+                <td>Suma de contribuciones del Grupo:</td>
+                <td>{{ group.total_contribution }} soles</td>
+            </tr>
+            <tr>
+              <td class="border-bottom">2 * Suma de Contribuciones:</td>
+              <td class="border-bottom">32 soles</td>
+            </tr>
+
+            <tr>
+              <td class="border-bottom">Ganancias del Proyecto Grupal:</td>
+              <td class="border-bottom">32 soles</td>
+            </tr>
+
+            <tr>
+              <td>Por lo tanto tu pago de la ronda es:</td>
+              <td>{{ player.payoff }} soles</td>
+            </tr>
+        </table>
+        
+    </p>
+    
+    
+    <p>
+      La aplicación escogida para el pago es public_goods y tu pago final del experimento es de {{ player.payoff }} soles.
+    </p>
+
+    {{ next_button }}
+
+{{ endblock }}
+
+{{ block extrajs }}
+  <style>
+    .round-title {
+      color: #9c9c9c; /* Cambia el color a un tono gris deseado */
+      margin-bottom: 10px;
+    }
+  </style>
+{{ endblock }}
